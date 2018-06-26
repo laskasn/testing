@@ -1,16 +1,35 @@
 package org.laskarisn.tst;
 
-import java.util.Date;
-import java.util.Random;
-import java.util.stream.IntStream;
+import java.util.Arrays;
 
+import org.springframework.boot.CommandLineRunner;
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.annotation.Bean;
+
+@SpringBootApplication
 public class MyApp {
 
-	
-	public static void main (String [] args) {
-		double res = IntStream.range(1, new Random(new Date().getTime()).nextInt(100)).mapToDouble(i->(double)i).map(i -> i * i).reduce((i,j)-> { return j/i;}).getAsDouble();
-		System.out.println(res);
-	}
+	public static void main(String[] args) {
+        SpringApplication.run(MyApp.class, args);
+    }
+
+    @Bean
+    public CommandLineRunner commandLineRunner(ApplicationContext ctx) {
+        return args -> {
+
+            System.out.println("Let's inspect the beans provided by Spring Boot:");
+
+            String[] beanNames = ctx.getBeanDefinitionNames();
+            Arrays.sort(beanNames);
+            for (String beanName : beanNames) {
+                System.out.println(beanName);
+            }
+
+        };
+    }
+
 	
 	
 }

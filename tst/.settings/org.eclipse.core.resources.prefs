@@ -1,6 +1,9 @@
 eclipse.preferences.version=1
 encoding//src/main/java=UTF-8
+<<<<<<< v1.0
 encoding//src/main/resources=UTF-8
 encoding//src/test/java=UTF-8
 encoding//src/test/resources=UTF-8
+=======
+>>>>>>> 6ac0210 Added spring boot
 encoding/<project>=UTF-8
