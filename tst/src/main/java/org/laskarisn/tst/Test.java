@@ -6,5 +6,8 @@ public class Test {
 		System.out.println("OK");
 	}
 	
+	public static void alt(){
+		System.out.println("alt");
+	}
 	
 }
