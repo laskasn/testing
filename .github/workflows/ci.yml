@@ -24,7 +24,7 @@ jobs:
           name: Release
           path: target/*jar
       
-      - run: rm -rf target
+#      - run: rm -rf target
 
       - run: rm -rf .git
 
