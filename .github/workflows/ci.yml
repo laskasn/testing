@@ -17,7 +17,7 @@ jobs:
         run: mvn --batch-mode --update-snapshots verify
         
       - name: Zip file into a specific archive
-        run: zip build.zip target/*jar
+        run: zip -j build.zip target/*jar
       
       - uses: actions/upload-artifact@v2
         with:
