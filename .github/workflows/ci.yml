@@ -7,7 +7,7 @@ jobs:
 
       - uses: actions/checkout@v2
         with:
-          repository: 'laskasn/keycloak-theme-vanilla'
+          repository: 'eosc-kc/keycloak-theme-vanilla'
 
       - name: Set up JDK 8
         uses: actions/setup-java@v2
