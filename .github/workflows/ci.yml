@@ -26,7 +26,7 @@ jobs:
 #        run:
 
       - name: Build with Maven
-        run: mvn --batch-mode --update-snapshots verify
+        run: cd theme && mvn --batch-mode --update-snapshots verify
 
 
 
