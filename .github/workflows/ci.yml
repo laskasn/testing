@@ -15,9 +15,12 @@ jobs:
       - uses: actions/checkout@v2
         with:
           repository: 'eosc-kc/keycloak-theme-vanilla'
+          path: theme
 
       #checkout also this repo
       - uses: actions/checkout@v2
+        with:
+          path: override
 
 #      - name: Override configuration
 #        run:
